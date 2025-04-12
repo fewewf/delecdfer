@@ -3,7 +3,7 @@ import requests
 from datetime import datetime
 
 # 从环境变量获取配置
-API_TOKEN = os.getenv('CF_API_TOKEN')
+API_TOKEN = os.getenv('CF_API_TOKEN1')
 ACCOUNT_ID = os.getenv('CF_ACCOUNT_ID')
 
 def check_environment():
