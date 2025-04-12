@@ -3,8 +3,8 @@ name: Cleanup Cloudflare work
 on:
   #push:
   #  branches: [ main ]
-  schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 0点运行
+  #schedule:
+   # - cron: '0 0 * * *'  # 每天 UTC 0点运行
   workflow_dispatch:      # 允许手动触发
 
 jobs:
@@ -30,3 +30,10 @@ jobs:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: python 1.py 
+      - name: Delete Workflow Runs
+        uses: Mattraks/delete-workflow-runs@v2.0.6
+        with:
+         token: ${{ secrets.GITHUB_TOKEN }}
+         repository: ${{ github.repository }}
+         retain_days: 1
+         keep_minimum_runs: 0
