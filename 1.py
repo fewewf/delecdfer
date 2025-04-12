@@ -8,7 +8,7 @@ ACCOUNT_ID = os.getenv('CF_ACCOUNT_ID')
 
 def check_environment():
     """检查环境变量是否已正确设置"""
-    required_vars = ['CF_API_TOKEN', 'CF_ACCOUNT_ID']
+    required_vars = ['CF_API_TOKEN1', 'CF_ACCOUNT_ID']
     missing_vars = [var for var in required_vars if not os.getenv(var)]
     
     if missing_vars:
