@@ -3,8 +3,8 @@ name: Cleanup Cloudflare Pages Deployments
 on:
   #push:
   #  branches: [ main ]
-  schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 0点运行
+  #schedule:
+   # - cron: '0 0 * * *'  # 每天 UTC 0点运行
   workflow_dispatch:      # 允许手动触发
 
 jobs:
